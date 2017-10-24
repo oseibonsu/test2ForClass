@@ -1,6 +1,15 @@
-<html>
-<body>
-  Test
-  new line
-</body>
-</html>
+
+var answers = {};
+
+function fn(a, b) {
+  if (answers[a] && answers[a][b]) {
+    return answers[a][b];
+  }
+  var answer = a + b;
+  if (!answers[a]) {
+    answers[a] = {
+    }
+  }
+  answers[a][b] = answer;
+  return answer;
+}
